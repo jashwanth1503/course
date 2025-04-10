@@ -3,65 +3,62 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function FlexLayoutScreen() {
   return (
+
+
     <View style={styles.container}>
-      <View style={styles.box1}>
-        <Text>Box 1</Text>
+      <View style={styles.rowContainer}>
+        <View style={styles.boxContainer}>
+          <Text style={styles.boxtext}>Box1</Text>
+        </View>
+        <View style={[styles.boxContainer, { backgroundColor: "orange" }]}>
+          <Text style={styles.boxtext}>Box2</Text>
+        </View>
       </View>
-      <View style={styles.box2}>
-        <Text>Box 2</Text>
+      <View style={styles.rowContainer}>
+        <View style={[styles.boxContainer,{backgroundColor:"#CACFD2"}]}>
+          <Text style={styles.boxtext}>Box3</Text>
+        </View>
+        <View style={[styles.boxContainer, { backgroundColor: "#3498DB" }]}>
+          <Text style={styles.boxtext}>Box4</Text>
+        </View>
+        <View style={[styles.boxContainer, { backgroundColor: "white" }]}>
+          <Text style={styles.boxtext}>Box5</Text>
+        </View>
+        </View>
+      <View style={styles.rowContainer}>
+      <View style={[styles.boxContainer, { backgroundColor: "#616A6B" }]}>
+          <Text style={styles.boxtext}>Box6</Text>
+        </View>
       </View>
-      <View style={styles.box3}>
-        <Text>Box 3</Text>
-      </View>
+
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column', 
-    justifyContent: 'space-around',
-    alignItems: 'center', 
-    flex:1, 
-  },
-  box1: {
-    backgroundColor: '#008080',
-    padding: 20,
-    height:100,
-    width:'80%',
-    alignItems:'center',
-    shadowColor: 'black',
-    shadowOffset:{width:2,height:4},
-    shadowOpacity:0.5,
-    borderRadius:4,
+    flex: 1,
+    backgroundColor: 'black',
     justifyContent:'center',
-    elevation:5
+    alignItems:'center'
+  },
+  boxContainer: {
+    backgroundColor: 'yellow',
+    height: 50,
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    marginHorizontal:5,
     
   },
-  box2: {
-    backgroundColor: '#5F6A6A',
-    padding: 20,
-    height:100,
-    width:'80%',
-    alignItems:'center',
-    hadowColor: 'black',
-    shadowOffset:{width:2,height:4},
-    shadowOpacity:0.5,
-    borderRadius:4,
-    justifyContent:'center',
-    elevation:5
+  rowContainer: {
+    flexDirection: 'row',
+    //width:'100%',
+    justifyContent:'space-between',
+    marginVertical:10
   },
-  box3: {
-    backgroundColor: '#D7DBDD',
-    padding: 20,
-    height:100,
-    width:'80%',
-    alignItems:'center',
-    hadowColor: 'black',
-    shadowOffset:{width:2,height:4},
-    shadowOpacity:0.5,
-    borderRadius:4,
-    justifyContent:'center',
-    elevation:5
-  },
+  boxtext: {
+    color: 'black'
+  }
 });
+
