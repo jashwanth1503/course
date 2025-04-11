@@ -40,22 +40,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     justifyContent:'center',
-    alignItems:'center'
+    padding:10
+    //alignItems:'center'
   },
   boxContainer: {
     backgroundColor: 'yellow',
-    height: 50,
+    //height: 50,
     flex:1,
     alignItems:'center',
     justifyContent:'center',
-    marginHorizontal:5,
+    //marginHorizontal:5,
     
   },
   rowContainer: {
     flexDirection: 'row',
     //width:'100%',
     justifyContent:'space-between',
-    marginVertical:10
+    //marginVertical:10
   },
   boxtext: {
     color: 'black'
