@@ -57,9 +57,11 @@ const styles = StyleSheet.create({
     //width:'100%',
     justifyContent:'space-between',
     //marginVertical:10
+    
   },
   boxtext: {
     color: 'black'
   }
 });
+
 
